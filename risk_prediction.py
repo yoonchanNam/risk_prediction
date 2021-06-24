@@ -100,12 +100,12 @@ def draw_boxes(region,dx,dy,ds,img, bbox, identities=None, categories=None, name
         # 위험지역에 들어온 box는 빨간색으로 표시하고, box 왼쪽위에 score 표시
         if x1_ < img.shape[1] and x2_ <img.shape[1] and y1_ < img.shape[0] and y2_ < img.shape[0]:
           if pred_risk_point == 0.0 and real_risk_point == 0.0:         
-                #cv2.rectangle(img, (x1, y1), (x2, y2),color, 1)
+                cv2.rectangle(img, (x1, y1), (x2, y2),color, 1)
                 cv2.rectangle(img, (x1_, y1_), (x2_, y2_),[0,255,0], 1)  
                 cv2.putText(img, f'{pred_risk_point}', (x1_, y1_ +
                                   t_size[1] + 4), cv2.FONT_HERSHEY_PLAIN, 1, [0, 255, 0], 1)
           else:
-                #cv2.rectangle(img, (x1, y1), (x2, y2),[0,0,255], 1)
+                cv2.rectangle(img, (x1, y1), (x2, y2),[0,0,255], 1)
                 cv2.rectangle(img, (x1_, y1_), (x2_, y2_),[0,0,255], 1) 
                 cv2.putText(img, f'{pred_risk_point}', (x1_, y1_ +
                                   t_size[1] + 4), cv2.FONT_HERSHEY_PLAIN, 1, [0, 0, 255], 1)
