@@ -1,38 +1,3 @@
-"""
-    ClassySORT
-    
-    YOLO v5(image segmentation) + vanilla SORT(multi-object tracker) implementation 
-    that is aware of the tracked object category.
-    
-    This is for people who want a real-time multiple object tracker (MOT) 
-    that can track any kind of object with no additional training.
-    
-    If you only need to track people, then I recommend YOLOv5 + DeepSORT implementations.
-    DeepSORT adds a separately trained neural network on top of SORT, 
-    which increases accuracy for human detections but decreases performance slightly.
-    
-    
-    Copyright (C) 2020-2021 Jason Sohn tensorturtle@gmail.com
-    
-    
-    === start GNU License ===
-    
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-    
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-    
-    === end GNU License ===
-"""
-
 # python interpreter searchs these subdirectories for modules
 import sys
 sys.path.insert(0, './yolov5')
