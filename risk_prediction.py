@@ -76,7 +76,7 @@ def draw_boxes(region,dx,dy,ds,img, bbox, identities=None, categories=None, name
         
         ratio = h/w
         # box 크기 변화율에 따라 근사화 하여 다음 box의 크기를 결정
-        dx1 = round(int(ds[id-1])/(2*w + 2*raito*h))
+        dx1 = round(int(ds[id-1])/(2*w + 2*ratio*h))
         dy1 = round(0.8*dx1)
 
 
